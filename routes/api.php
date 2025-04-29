@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LectorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
@@ -10,4 +11,6 @@ Route::get('/user', function (Request $request) {
 
 Route::apiResource('libros', LibroController::class);
 
-    
+Route::apiResource('lectores', LectorController::class)->parameters([
+    'lectores' => 'lector'
+]);

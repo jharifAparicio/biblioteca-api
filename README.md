@@ -13,7 +13,7 @@ php artisan make:model Libro -msfc --api
 
 ### en la migracion colocar los campos
 
-## CRear los seeders 
+## Crear los seeders 
 no olivdar enlazar los seeders al databaseseeder
 
 ## hacer correr las migraciones y los seeders
@@ -22,3 +22,6 @@ php artisan migrate:fresh --seed
 
 ## hacer correr la api
 php artisan serve
+
+## ver rutas que existen
+php artisan route:list
