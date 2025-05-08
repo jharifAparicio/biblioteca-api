@@ -9,6 +9,8 @@ class Lector extends Model
 {
     /** @use HasFactory<\Database\Factories\LectorFactory> */
     use HasFactory;
+    // esto es para que el nombre de la tabla no sea plural
+    protected $table = 'lectores';
     protected $fillable = [
         'nombres',
         'apellidos',

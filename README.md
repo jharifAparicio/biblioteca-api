@@ -25,3 +25,13 @@ php artisan serve
 
 ## ver rutas que existen
 php artisan route:list
+
+## instalar jwt
+
+composer require firebase/php-jwt
+
+# ewscribi condigo en el archivo .env
+JWT_SECRET = secret
+JWT_ALGORITHM = HS256
+
+## instalar 
