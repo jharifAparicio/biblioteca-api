@@ -18,4 +18,9 @@ class Lector extends Model
         'correo',
         'celular'
     ];
+
+    public function prestamos()
+    {
+        return $this->hasMany(Prestamo::class);
+    }
 }

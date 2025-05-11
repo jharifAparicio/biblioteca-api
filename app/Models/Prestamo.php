@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Libro extends Model
+class Prestamo extends Model
 {
-    /** @use HasFactory<\Database\Factories\LibroFactory> */
+    /** @use HasFactory<\Database\Factories\PrestamoFactory> */
     use HasFactory;
-    protected $fillable = [
-        'titulo',
-        'autor',
-        'editorial',
-        'isbn',
-        'fecha_publicacion',
-        'numero_paginas'
-    ];
+
+    public function lector()
+    {
+        return $this->belongsTo(Lector::class);
+    }
 
     public function detalles()
     {

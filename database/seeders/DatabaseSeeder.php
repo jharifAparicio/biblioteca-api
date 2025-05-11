@@ -27,5 +27,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             LectorSeeder::class
         ]);
+        $this->call([
+            PrestamoSeeder::class
+        ]);
     }
 }

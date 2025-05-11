@@ -30,8 +30,12 @@ class JwtMiddleware
                 'rol' => $datos->rol,
                 'id' => $datos->nombre
             ]);
+
+            if ($datos->rol !== 'administrador') {
+                return response()->json(['status' => 'Acceso denegado, solo administradores pueden modificar datos.'], 403);
+            }
         } catch (\Exception $e) {
-            return response()->json(['status' => 'Token no autorizado'.$e->getMessage()], 401);
+            return response()->json(['status' => 'Token no autorizado' . $e->getMessage()], 401);
         }
         return $next($request);
     }
